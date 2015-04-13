@@ -38,6 +38,7 @@
     NSString *resultString = [[NSString alloc]initWithFormat:@"Celcius %.2f", celcius];
     
     _resultLabel.text = resultString;
+    // this code makes it that when everything in this method is completed, it will hide the keyboard.
     [_tempText resignFirstResponder];
 }
 
