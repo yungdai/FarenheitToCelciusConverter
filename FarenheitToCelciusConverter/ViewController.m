@@ -31,23 +31,43 @@
     [sender resignFirstResponder];
 }
 
-- (IBAction)convertTemperatureButtonPressed:(id)sender {
-    double farenheit = [_tempText.text doubleValue];
+- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender {
+    double farenheit = [_convertfromFarenheitToCelcius.text doubleValue];
     double celcius = (farenheit - 32) / 1.8;
     
     NSString *resultString = [[NSString alloc]initWithFormat:@"Celcius %.2f", celcius];
     
-    _resultLabel.text = resultString;
+    _resultInCelcius.text = resultString;
+    
     // this code makes it that when everything in this method is completed, it will hide the keyboard.
-    [_tempText resignFirstResponder];
+    [_convertfromFarenheitToCelcius resignFirstResponder];
+
+    
+}
+
+- (IBAction)convertCelciusToFarenheitButtonPressed:(id)sender {
+    
+    double celcius = [_convertFromCelciustoFarenheit.text doubleValue];
+    double farenheit = (celcius * 9) /5 + 32;
+    
+    NSString *resultString = [[NSString alloc]initWithFormat:@"Farenheit %.2f", farenheit];
+    
+    _resultInFarenheit.text = resultString;
+    
+    // once again hide the keyboard after the button is pressed
+    [_convertFromCelciustoFarenheit resignFirstResponder];
+
+    
 }
 
 
-// this code ensures that _tempText will hide the keyboard whenever anythign else is touched.
+// this code ensures that the two text boxes will hide the keyboard whenever anythign else is touched.
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [[event allTouches] anyObject];
-    if ([_tempText isFirstResponder] && [touch view] != _tempText) {
-        [_tempText resignFirstResponder];
+    if ([_convertfromFarenheitToCelcius isFirstResponder] && [touch view] != _convertfromFarenheitToCelcius) {
+        [_convertfromFarenheitToCelcius resignFirstResponder];
+    } else if ([_convertFromCelciustoFarenheit isFirstResponder] && [touch view] != _convertFromCelciustoFarenheit) {
+        [_convertFromCelciustoFarenheit isFirstResponder];
     }
     [super touchesBegan:touches withEvent:event];
 }

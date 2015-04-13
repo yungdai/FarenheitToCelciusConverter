@@ -10,11 +10,18 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextField *tempText;
-@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+@property (strong, nonatomic) IBOutlet UITextField *convertfromFarenheitToCelcius;
+@property (strong, nonatomic) IBOutlet UITextField *convertFromCelciustoFarenheit;
+@property (strong, nonatomic) IBOutlet UILabel *resultInCelcius;
+@property (strong, nonatomic) IBOutlet UILabel *resultInFarenheit;
 
 
-- (IBAction)convertTemperatureButtonPressed:(id)sender;
+
+- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender;
+- (IBAction)convertCelciusToFarenheitButtonPressed:(id)sender;
+
+
+
 - (IBAction)textFieldReturn:(id)sender;
 
 
