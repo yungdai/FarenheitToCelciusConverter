@@ -13,7 +13,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *tempText;
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
 
-- (IBAction)convertTemperature:(id)sender;
+
+- (IBAction)convertTemperatureButtonPressed:(id)sender;
+- (IBAction)textFieldReturn:(id)sender;
+
 
 @end
 
