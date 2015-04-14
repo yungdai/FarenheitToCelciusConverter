@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93E24BB6-D379-4EB2-A565-86DF8588D629</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FarenheitToCelciusConverter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6FA13CE429AB50E16DE983054C5B5D7EF469F4F3</key>
+		<string>https://github.com/yungdai/FarenheitToCelciusConverter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FarenheitToCelciusConverter.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6FA13CE429AB50E16DE983054C5B5D7EF469F4F3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yungdai/FarenheitToCelciusConverter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6FA13CE429AB50E16DE983054C5B5D7EF469F4F3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6FA13CE429AB50E16DE983054C5B5D7EF469F4F3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FarenheitToCelciusConverter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
