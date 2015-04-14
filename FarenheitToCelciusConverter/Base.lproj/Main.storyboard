@@ -28,14 +28,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A Temperature in Farenheit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-F2-cmh">
-                                <rect key="frame" x="32" y="60" width="256" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                <connections>
-                                    <action selector="textFieldReturn:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="Ihb-Qm-rrN"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A Temperature in Celcius" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAX-M7-EfX">
                                 <rect key="frame" x="32" y="278" width="256" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -65,6 +57,14 @@
                                     <action selector="convertCelciusToFarenheitButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZND-OJ-C2D"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A Temperature in Farenheit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-F2-cmh">
+                                <rect key="frame" x="32" y="60" width="256" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="textFieldReturn:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="Ihb-Qm-rrN"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
