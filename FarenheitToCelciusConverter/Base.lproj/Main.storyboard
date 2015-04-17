@@ -22,6 +22,9 @@
                                     <segment title="Celsius"/>
                                     <segment title="Farenheit"/>
                                 </segments>
+                                <connections>
+                                    <action selector="selectedTemperature:" destination="vXZ-lx-hvc" eventType="valueChanged" id="3HZ-EX-4fA"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QE-nN-mET">
                                 <rect key="frame" x="88" y="81" width="144" height="30"/>
@@ -29,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-Om-aIM">
-                                <rect key="frame" x="88" y="137" width="42" height="21"/>
+                                <rect key="frame" x="88" y="136" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,6 +40,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="temperatureInput" destination="8QE-nN-mET" id="LR8-Vg-Agu"/>
+                        <outlet property="temperatureResultLabel" destination="JOz-Om-aIM" id="E3q-cf-UN3"/>
+                        <outlet property="temperatureSelectionControl" destination="45c-86-0hM" id="fTM-ca-Nnz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
