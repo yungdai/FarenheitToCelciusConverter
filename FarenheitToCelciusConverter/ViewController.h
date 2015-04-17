@@ -16,9 +16,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *temperatureResultLabel;
 @property (strong, nonatomic) IBOutlet UITextField *temperatureInput;
 
+
 - (IBAction)selectedTemperature:(UISegmentedControl *)sender;
 
--(NSNumber*)simpleConvert:(NSNumber*)valueToConvert;
+-(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius;
+-(NSNumber *)farenheitToCelsius:(NSNumber *)valueInFarenheit;
 
 
 //- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender;

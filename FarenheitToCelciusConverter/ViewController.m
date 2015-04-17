@@ -15,8 +15,8 @@
 
 @implementation ViewController
 {
-    NSNumber  *celsius;
-    NSNumber *farenheit;
+
+    
 
     
 }
@@ -50,8 +50,10 @@
     }
 }
 
--(NSNumber*)simpleConvert:(NSNumber*)valueToConvert {
-    return @23;
+-(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius {
+    valueInCelsius = @([self.temperatureInput.text floatValue]);
+    
+    return  valueInCelsius;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
