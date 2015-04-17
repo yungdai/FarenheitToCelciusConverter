@@ -11,16 +11,14 @@
 @implementation temperatureConversion
 
 
-- (double)convertFarenheitToCelcius {
-    double farenheit = [_farenheit doubleValue];
-    double celcius = (farenheit - 32) / 1.8;
+- (NSNumber *)convertFarenheitToCelcius:(NSNumber *)valueInFarenheit {
+    NSNumber *celsius  = (valueInFarenheit - 32) / 1.8;
     
-    return celcius;
+    return celsius;
 }
 
-- (double)convertCelciusToFarenheit {
-    double celcius = [_celsius doubleValue];
-    double farenheit = (celcius * 9) /5 + 32;
+- (NSNumber *)convertCelsiusToFarenheit:(NSNumber *)valueInCelcius {
+    NSNumber *farenheit = (valueInCelcius * 9.0) /5 + 32;
     
     return farenheit;
 }

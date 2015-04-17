@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSNumber *celsius;
 
 
-- (double)convertFarenheitToCelcius;
-- (double)convertCelciusToFarenheit;
+- (NSNumber *)convertFarenheitToCelcius:(NSNumber *)valueInCelsius;
+- (NSNumber *)convertCelsiusToFarenheit:(NSNumber *)valueInFarenheit;
+
 @end

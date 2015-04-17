@@ -20,9 +20,12 @@
 
     
 }
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.temperatureResultLabel.text = @"Celsius Selected";
+    
     // Do any additional setup after loading the view, typically from a nib.
     
 }
@@ -33,6 +36,7 @@
 
         case 0:
         {
+            
             self.temperatureResultLabel.text = @"Celsius selected";
             
             break;
@@ -55,6 +59,7 @@
     
     return  valueInCelsius;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
