@@ -15,13 +15,21 @@
 
 @implementation ViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _temperatureResultLabel = @"";
+    }
+    return self;
+}
 
 // here are the two methods to do the take the temperatureInput and convert them to the respective temperature values
 - (void)convertFarenheitToCelsius {
     double farenheit = [_temperatureInput.text doubleValue];
     double celcius = (farenheit - 32) / 1.8;
     
-    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.1f °C", celcius];
+    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.0f°F is %.1f in °C", farenheit, celcius];
     _temperatureResultLabel.text = resultLabel;
 }
 
@@ -30,7 +38,7 @@
     double celsius = [_temperatureInput.text doubleValue];
     double farenheit = (celsius * 1.8) +32;
     
-    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.1f °F", farenheit];
+    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.0f°C is %.1f in °F", celsius, farenheit];
     
     _temperatureResultLabel.text = resultLabel;
 }
@@ -38,7 +46,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.temperatureResultLabel.text = @"Celsius Selected";
+
     
     // Do any additional setup after loading the view, typically from a nib.
     
