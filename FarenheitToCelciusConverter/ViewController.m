@@ -57,10 +57,9 @@
     {
             
         case 0:
-        {
             [self convertCelsiusToFarenheit];
             break;
-        }
+        
         case 1:
             [self convertFarenheitToCelsius];
             break;

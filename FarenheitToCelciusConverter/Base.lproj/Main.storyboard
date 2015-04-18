@@ -19,7 +19,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QE-nN-mET">
                                 <rect key="frame" x="88" y="81" width="144" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="temperatureResultLableReturn:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="Wyn-B2-kid"/>
                                     <action selector="textFieldReturn:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="QLG-DA-cde"/>
