@@ -14,7 +14,7 @@
 		1A7EBF6A1ADC4A46005B95DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7EBF691ADC4A46005B95DD /* Images.xcassets */; };
 		1A7EBF6D1ADC4A46005B95DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7EBF6B1ADC4A46005B95DD /* LaunchScreen.xib */; };
 		1A7EBF791ADC4A46005B95DD /* FarenheitToCelciusConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EBF781ADC4A46005B95DD /* FarenheitToCelciusConverterTests.m */; };
-		1A96B1521AE19CF1002A60D3 /* temperatureConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A96B1511AE19CF1002A60D3 /* temperatureConversion.m */; };
+		1AD880411AE2973D00A92D10 /* TemperatureConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD880401AE2973D00A92D10 /* TemperatureConversion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,8 @@
 		1A7EBF721ADC4A46005B95DD /* FarenheitToCelciusConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarenheitToCelciusConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7EBF771ADC4A46005B95DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7EBF781ADC4A46005B95DD /* FarenheitToCelciusConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarenheitToCelciusConverterTests.m; sourceTree = "<group>"; };
-		1A96B1501AE19CF1002A60D3 /* temperatureConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = temperatureConversion.h; sourceTree = "<group>"; };
-		1A96B1511AE19CF1002A60D3 /* temperatureConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = temperatureConversion.m; sourceTree = "<group>"; };
+		1AD8803F1AE2973D00A92D10 /* TemperatureConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureConversion.h; sourceTree = "<group>"; };
+		1AD880401AE2973D00A92D10 /* TemperatureConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureConversion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +86,10 @@
 			children = (
 				1A7EBF601ADC4A46005B95DD /* AppDelegate.h */,
 				1A7EBF611ADC4A46005B95DD /* AppDelegate.m */,
-				1A96B1501AE19CF1002A60D3 /* temperatureConversion.h */,
-				1A96B1511AE19CF1002A60D3 /* temperatureConversion.m */,
 				1A7EBF631ADC4A46005B95DD /* ViewController.h */,
 				1A7EBF641ADC4A46005B95DD /* ViewController.m */,
+				1AD8803F1AE2973D00A92D10 /* TemperatureConversion.h */,
+				1AD880401AE2973D00A92D10 /* TemperatureConversion.m */,
 				1A7EBF661ADC4A46005B95DD /* Main.storyboard */,
 				1A7EBF691ADC4A46005B95DD /* Images.xcassets */,
 				1A7EBF6B1ADC4A46005B95DD /* LaunchScreen.xib */,
@@ -227,7 +227,7 @@
 			files = (
 				1A7EBF651ADC4A46005B95DD /* ViewController.m in Sources */,
 				1A7EBF621ADC4A46005B95DD /* AppDelegate.m in Sources */,
-				1A96B1521AE19CF1002A60D3 /* temperatureConversion.m in Sources */,
+				1AD880411AE2973D00A92D10 /* TemperatureConversion.m in Sources */,
 				1A7EBF5F1ADC4A46005B95DD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

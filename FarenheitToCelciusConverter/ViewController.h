@@ -17,10 +17,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *temperatureInput;
 
 
-- (IBAction)selectedTemperature:(UISegmentedControl *)sender;
 
--(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius;
--(NSNumber *)farenheitToCelsius:(NSNumber *)valueInFarenheit;
+
+- (IBAction)selectedTemperature:(UISegmentedControl *)sender;
+//
+//-(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius;
+//-(NSNumber *)farenheitToCelsius:(NSNumber *)valueInFarenheit;
 
 
 //- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender;

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "temperatureConversion.h"
+#import "TemperatureConversion.h"
 
 @interface ViewController ()
 
@@ -33,16 +33,16 @@
 - (IBAction)selectedTemperature:(UISegmentedControl *)sender {
     switch (self.temperatureSelectionControl.selectedSegmentIndex)
     {
-
+            
         case 0:
         {
-            
-            self.temperatureResultLabel.text = @"Celsius selected";
-            
+            TemperatureConversion *resultFarenheit = [[TemperatureConversion alloc]init];
+            [resultFarenheit convertCelsiusToFarenheit:[(double *)[self.temperatureInput.text doubleValue]);
+            self.temperatureResultLabel.text = resultFarenheit;
             break;
         }
         case 1:
-        {
+        
             self.temperatureResultLabel.text = @"Farenheit selected";
 
             break;
@@ -54,11 +54,12 @@
     }
 }
 
--(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius {
-    valueInCelsius = @([self.temperatureInput.text floatValue]);
-    
-    return  valueInCelsius;
-}
+//-(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius {
+//    valueInCelsius = @([self.temperatureInput.text doubleValue]);
+//    
+//    
+//    return  valueInCelsius;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
