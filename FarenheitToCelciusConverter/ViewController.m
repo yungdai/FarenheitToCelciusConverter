@@ -7,18 +7,32 @@
 //
 
 #import "ViewController.h"
-#import "TemperatureConversion.h"
+
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-{
 
-    
 
+// here are the two methods to do the take the temperatureInput and convert them to the respective temperature values
+- (void)convertFarenheitToCelsius {
+    double farenheit = [_temperatureInput.text doubleValue];
+    double celcius = (farenheit - 32) / 1.8;
     
+    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.1f °C", celcius];
+    _temperatureResultLabel.text = resultLabel;
+}
+
+
+- (void)convertCelsiusToFarenheit {
+    double celsius = [_temperatureInput.text doubleValue];
+    double farenheit = (celsius * 1.8) +32;
+    
+    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.1f °F", farenheit];
+    
+    _temperatureResultLabel.text = resultLabel;
 }
 
 
@@ -36,30 +50,19 @@
             
         case 0:
         {
-            TemperatureConversion *resultFarenheit = [[TemperatureConversion alloc]init];
-            [resultFarenheit convertCelsiusToFarenheit:[(double *)[self.temperatureInput.text doubleValue]);
-            self.temperatureResultLabel.text = resultFarenheit;
+            [self convertCelsiusToFarenheit];
             break;
         }
         case 1:
-        
-            self.temperatureResultLabel.text = @"Farenheit selected";
-
+            [self convertFarenheitToCelsius];
             break;
-        }
-        default:
-        {
-            break;
-        }
     }
 }
 
-//-(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius {
-//    valueInCelsius = @([self.temperatureInput.text doubleValue]);
-//    
-//    
-//    return  valueInCelsius;
-//}
+                                                        
+                                                        
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -67,56 +70,19 @@
 }
 
 // this code will hide the keyboard when the return key on the keyboard is pressed
-- (IBAction)textFieldReturn:(id)sender {
+- (IBAction)temperatureResultLableReturn:(id)sender {
     [sender resignFirstResponder];
 }
 
 
-//- (double)convertFarenheitToCelcius {
-//    double farenheit = [_temperatureInput.text doubleValue];
-//    double celcius = (farenheit - 32) / 1.8;
-//
-//    return celcius;
-//}
-//
-//- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender {
-//    double farenheit = [_convertfromFarenheitToCelcius.text doubleValue];
-//    double celcius = (farenheit - 32) / 1.8;
-//    
-//    NSString *resultString = [[NSString alloc]initWithFormat:@"Celcius %.2f", celcius];
-//    
-//    _resultInCelcius.text = resultString;
-//    
-//    // this code makes it that when everything in this method is completed, it will hide the keyboard.
-//    [_convertfromFarenheitToCelcius resignFirstResponder];
-//
-//    
-//}
-//
-//- (IBAction)convertCelciusToFarenheitButtonPressed:(id)sender {
-//    
-//    double celcius = [_convertFromCelciustoFarenheit.text doubleValue];
-//    double farenheit = (celcius * 9) /5 + 32;
-//    
-//    NSString *resultString = [[NSString alloc]initWithFormat:@"Farenheit %.2f", farenheit];
-//    
-//    _resultInFarenheit.text = resultString;
-//    
-//    // once again hide the keyboard after the button is pressed
-//    [_convertFromCelciustoFarenheit resignFirstResponder];
-//
-//    
-//}
 
 
 // this code ensures that the two text boxes will hide the keyboard whenever anythign else is touched.
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    UITouch *touch = [[event allTouches] anyObject];
-//    if ([_convertfromFarenheitToCelcius isFirstResponder] && [touch view] != _convertfromFarenheitToCelcius) {
-//        [_convertfromFarenheitToCelcius resignFirstResponder];
-//    } else if ([_convertFromCelciustoFarenheit isFirstResponder] && [touch view] != _convertFromCelciustoFarenheit) {
-//        [_convertFromCelciustoFarenheit isFirstResponder];
-//    }
-//    [super touchesBegan:touches withEvent:event];
-//}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([_temperatureResultLabel isFirstResponder] && [touch view] != _temperatureResultLabel) {
+        [_temperatureResultLabel resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
 @end
