@@ -66,7 +66,7 @@
     }
 }
 
-
+// This code will autoupdate the temperatureLabelResultLabel when something is type into the textbox
 - (IBAction)textInputDetected:(id)sender {
     
     if (self.temperatureSelectionControl.selectedSegmentIndex == 0) {
