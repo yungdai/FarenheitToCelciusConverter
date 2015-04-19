@@ -10,19 +10,27 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextField *convertfromFarenheitToCelcius;
-@property (strong, nonatomic) IBOutlet UITextField *convertFromCelciustoFarenheit;
-@property (strong, nonatomic) IBOutlet UILabel *resultInCelcius;
-@property (strong, nonatomic) IBOutlet UILabel *resultInFarenheit;
+
+// new code for the selector
+@property (weak, nonatomic) IBOutlet UISegmentedControl *temperatureSelectionControl;
+@property (weak, nonatomic) IBOutlet UILabel *temperatureResultLabel;
+@property (strong, nonatomic) IBOutlet UITextField *temperatureInput;
 
 
 
-- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender;
-- (IBAction)convertCelciusToFarenheitButtonPressed:(id)sender;
+
+- (IBAction)selectedTemperature:(UISegmentedControl *)sender;
+//
+//-(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius;
+//-(NSNumber *)farenheitToCelsius:(NSNumber *)valueInFarenheit;
 
 
-
-- (IBAction)textFieldReturn:(id)sender;
+//- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender;
+//- (IBAction)convertCelciusToFarenheitButtonPressed:(id)sender;
+//
+//
+//
+//- (IBAction)textFieldReturn:(id)sender;
 
 
 @end

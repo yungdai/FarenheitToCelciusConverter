@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,76 +14,70 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-Ir-ZtT">
-                                <rect key="frame" x="32" y="103" width="191" height="30"/>
-                                <state key="normal" title="Touch to Convert to Celcius">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Converted Temperature to ˚C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4z-Nv-1Rp">
-                                <rect key="frame" x="32" y="141" width="256" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="600" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-Om-aIM">
+                                <rect key="frame" x="0.0" y="226" width="600" height="148"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="1ap-GX-7Qo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="158" width="400" height="172"/>
+                                </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A Temperature in Celcius" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAX-M7-EfX">
-                                <rect key="frame" x="32" y="278" width="256" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Converted Temperature to  ̊F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRA-da-0oA">
-                                <rect key="frame" x="32" y="354" width="256" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eW-4z-aIX">
-                                <rect key="frame" x="32" y="103" width="191" height="30"/>
-                                <state key="normal" title="Touch to Convert to Celcius">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="45c-86-0hM">
+                                <rect key="frame" x="16" y="41" width="568" height="29"/>
+                                <segments>
+                                    <segment title="Celsius"/>
+                                    <segment title="Farenheit"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-6" y="28" width="413" height="29"/>
+                                </variation>
                                 <connections>
-                                    <action selector="convertFarenheitToCelciusButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xnh-6Y-9C3"/>
+                                    <action selector="selectedTemperature:" destination="vXZ-lx-hvc" eventType="valueChanged" id="wkS-iN-k1A"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCH-fo-5mf">
-                                <rect key="frame" x="32" y="316" width="204" height="30"/>
-                                <state key="normal" title="Touch to Convert to Farenheit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="convertCelciusToFarenheitButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZND-OJ-C2D"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A Temperature in Farenheit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-F2-cmh">
-                                <rect key="frame" x="32" y="60" width="256" height="30"/>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QE-nN-mET">
+                                <rect key="frame" x="16" y="145" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="128" y="99" width="144" height="30"/>
+                                </variation>
                                 <connections>
-                                    <action selector="textFieldReturn:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="Ihb-Qm-rrN"/>
+                                    <action selector="temperatureInputReturn:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="5Cf-td-eZH"/>
+                                    <action selector="textInputDetected:" destination="vXZ-lx-hvc" eventType="editingChanged" id="7gd-o6-1y4"/>
                                 </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JOz-Om-aIM" firstAttribute="top" secondItem="8QE-nN-mET" secondAttribute="bottom" constant="25" id="6hQ-Pw-qCj"/>
+                            <constraint firstItem="JOz-Om-aIM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="7Ft-J0-vMl"/>
+                            <constraint firstItem="45c-86-0hM" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="CQc-ao-zYj"/>
+                            <constraint firstItem="8QE-nN-mET" firstAttribute="leading" secondItem="45c-86-0hM" secondAttribute="leading" id="Q07-Gv-LrN"/>
+                            <constraint firstItem="8QE-nN-mET" firstAttribute="top" secondItem="45c-86-0hM" secondAttribute="bottom" constant="76" id="RMG-KM-DI7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JOz-Om-aIM" secondAttribute="trailing" constant="-16" id="cBe-uA-JhL"/>
+                            <constraint firstItem="8QE-nN-mET" firstAttribute="trailing" secondItem="45c-86-0hM" secondAttribute="trailing" id="hRE-Hp-JQP"/>
+                            <constraint firstItem="45c-86-0hM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ryz-LI-Td7"/>
+                            <constraint firstItem="45c-86-0hM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="21" id="vBJ-qa-9gh"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="convertFromCelciustoFarenheit" destination="XAX-M7-EfX" id="G6a-oH-3gk"/>
-                        <outlet property="convertfromFarenheitToCelcius" destination="eHX-F2-cmh" id="HsI-kh-Z0r"/>
-                        <outlet property="resultInCelcius" destination="d4z-Nv-1Rp" id="gLx-lB-kno"/>
-                        <outlet property="resultInFarenheit" destination="sRA-da-0oA" id="Rjh-Ur-vN1"/>
+                        <outlet property="temperatureInput" destination="8QE-nN-mET" id="LR8-Vg-Agu"/>
+                        <outlet property="temperatureResultLabel" destination="JOz-Om-aIM" id="E3q-cf-UN3"/>
+                        <outlet property="temperatureSelectionControl" destination="45c-86-0hM" id="fTM-ca-Nnz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="406"/>
+            <point key="canvasLocation" x="321" y="554"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
