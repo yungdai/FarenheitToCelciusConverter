@@ -29,7 +29,7 @@
     double farenheit = [_temperatureInput.text doubleValue];
     double celcius = (farenheit - 32) / 1.8;
     
-    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.0f°F is %.1f in Celsius", farenheit, celcius];
+    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.0f°F = %.0f°C", farenheit, celcius];
     _temperatureResultLabel.text = resultLabel;
 }
 
@@ -38,7 +38,7 @@
     double celsius = [_temperatureInput.text doubleValue];
     double farenheit = (celsius * 1.8) +32;
     
-    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.0f°C is %.1f in Farenheit", celsius, farenheit];
+    NSString *resultLabel = [[NSString alloc]initWithFormat:@"%.0f°C = %.0f°F", celsius, farenheit];
     
     _temperatureResultLabel.text = resultLabel;
 }
