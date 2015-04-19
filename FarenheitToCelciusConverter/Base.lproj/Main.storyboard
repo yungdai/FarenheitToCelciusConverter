@@ -17,31 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QE-nN-mET">
-                                <rect key="frame" x="16" y="145" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="128" y="99" width="144" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="temperatureInputReturn:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="5Cf-td-eZH"/>
-                                    <action selector="textInputDetected:" destination="vXZ-lx-hvc" eventType="editingChanged" id="k4a-gT-u93"/>
-                                </connections>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="45c-86-0hM">
-                                <rect key="frame" x="16" y="41" width="568" height="29"/>
-                                <segments>
-                                    <segment title="Celsius"/>
-                                    <segment title="Farenheit"/>
-                                </segments>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-6" y="28" width="413" height="29"/>
-                                </variation>
-                                <connections>
-                                    <action selector="selectedTemperature:" destination="vXZ-lx-hvc" eventType="valueChanged" id="wkS-iN-k1A"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="600" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-Om-aIM">
                                 <rect key="frame" x="0.0" y="226" width="600" height="148"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,6 +30,31 @@
                                     <rect key="frame" x="0.0" y="158" width="400" height="172"/>
                                 </variation>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="45c-86-0hM">
+                                <rect key="frame" x="16" y="41" width="568" height="29"/>
+                                <segments>
+                                    <segment title="Celsius"/>
+                                    <segment title="Farenheit"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-6" y="28" width="413" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="selectedTemperature:" destination="vXZ-lx-hvc" eventType="valueChanged" id="wkS-iN-k1A"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a temperature" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QE-nN-mET">
+                                <rect key="frame" x="16" y="145" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="128" y="99" width="144" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="temperatureInputReturn:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="5Cf-td-eZH"/>
+                                    <action selector="textInputDetected:" destination="vXZ-lx-hvc" eventType="editingChanged" id="7gd-o6-1y4"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
