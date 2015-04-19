@@ -15,7 +15,14 @@
 
 @implementation ViewController
 
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _temperatureResultLabel = 0;
+    }
+    return self;
+}
 
 // here are the two methods to do the take the temperatureInput and convert them to the respective temperature values
 - (void)convertFarenheitToCelsius {
@@ -59,8 +66,16 @@
     }
 }
 
-                                                        
-                                                        
+
+- (IBAction)textInputDetected:(id)sender {
+    
+    if (self.temperatureSelectionControl.selectedSegmentIndex == 0) {
+        [self convertCelsiusToFarenheit];
+    } else if (self.temperatureSelectionControl.selectedSegmentIndex == 1) {
+        [self convertFarenheitToCelsius];
+    }
+}
+
 
 
 
@@ -69,12 +84,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 // this code will hide the keyboard when the return key on the keyboard is pressed
 - (IBAction)temperatureInputReturn:(id)sender {
     [sender resignFirstResponder];
 }
-
-
 
 
 // this code ensures that the two text boxes will hide the keyboard whenever anythign else is touched.
