@@ -20,17 +20,7 @@
 
 
 - (IBAction)selectedTemperature:(UISegmentedControl *)sender;
-//
-//-(NSNumber *)celsiusToFarenheit:(NSNumber *)valueInCelsius;
-//-(NSNumber *)farenheitToCelsius:(NSNumber *)valueInFarenheit;
 
-
-//- (IBAction)convertFarenheitToCelciusButtonPressed:(id)sender;
-//- (IBAction)convertCelciusToFarenheitButtonPressed:(id)sender;
-//
-//
-//
-//- (IBAction)textFieldReturn:(id)sender;
 
 
 @end
